@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css"
+  </head>
+  <body>
+    <div class="container">
+      <div
+        style="
+          background-color: #f6c6fa;
+          height: 10vh;
+          display: flex;
+          justify-content: space-between;
+          padding: 0 20px;
+          color: aliceblue;
+        "
+      >
+        <img src="/assets/logo_amikom_besar.png" style="width: 3cm" />
+        <a
+          href="/index.html"
+          style="background-color: red; color: white; width: 50px; height: 30px"
+        >
+          log out
+        </a>
+      </div>
+      <div style="display: flex">
+        <div
+          style="
+            background-color: #7146a3;
+            height: 90vh;
+            width: 15vw;
+            justify-content: flex-start;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+          "
+        >
+          <img
+            src="/assets/toppng.com-file-svg-profile-icon-vector-980x980.png"
+            alt="avatar"
+            style="
+              border-radius: 50%;
+              width: 100px;
+              height: 100px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+            "
+          />
+          <button
+            style="
+              width: 100%;
+              height: 5%;
+              border: 0px;
+              margin-bottom: 20px;
+              cursor: pointer;
+              transition-duration: 0.4%;
+            "
+          >
+            dashboard
+          </button>
+          <button
+            style="width: 100%; height: 5%; border: 0px; margin-bottom: 20px"
+          >
+            input data
+          </button>
+          <button
+            style="width: 100%; height: 5%; border: 0px; margin-bottom: 20px"
+          >
+            rekapitulasi
+          </button>
+          <button class="button button4">test button</button>
+        </div>
+        <div
+          style="
+            background-color: white;
+            height: 90vh;
+            width: 85vw;
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+          "
+        >
+          <div style="margin-top: 20px; margin-left: 50px">
+            <p style="font-size: 40px">My Profile</p>
+          </div>
+          <!-- personal information foto dan nama -->
+          <div
+            style="
+              background-color: rgb(198, 198, 198);
+              height: 30%;
+              width: 90%;
+              margin-top: 50px;
+              margin-left: 50px;
+              display: flex;
+              flex-direction: row;
+            "
+          >
+            <div style="width: 20%; margin-left: 10px;" >
+              <img
+                src="/assets/toppng.com-file-svg-profile-icon-vector-980x980.png"
+                alt="avatar"
+                style="
+                  border-radius: 50%;
+                  width: 100px;
+                  height: 100px;
+                  margin-top: 20px;
+                "
+              />
+            </div>
+            <div style="
+            width: 70%;
+            margin-top: 20px;" >
+              <p style="margin-bottom: 10px;">Muhammad Fairul</p>
+              <p style="margin-bottom: 10px;">Dosen</p>
+              <p>Sleman,Yogyakarta</p>
+            </div>
+            
+            <button style="
+            width: 10%; 
+            height: 10%;
+            margin-top: 20px;"
+            >
+            edit</button>
+          </div>
+          <!-- personal information section-->
+          <div
+            style="
+              background-color: rgb(198, 198, 198);
+              height: 30%;
+              width: 90%;
+              margin-top: 10px;
+              margin-left: 50px;
+              display: flex;
+              flex-direction: row;
+            "
+          >
+          <div style="width: 90%; margin-left: 10px;">
+              <div>
+                  <p style="font-size: 20px">My Profile</p>
+                </div>
+                <div style="display: flex; flex-direction: row;" >
+                    <div style="margin-right: 60%;">
+                        <p>First Name</p>
+                        <input type="text" placeholder="First Name" />
+                    </div>
+                    <div>
+                        <p>Last Name</p>
+                        <input type="text" placeholder="Last Name" />
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: row">
+                    <div style="margin-right: 60%;">
+                        <p>Email Addres</p>
+                        <input type="text" placeholder="Email Addres" />
+                    </div>
+                    <div>
+                        <p>Phone Number</p>
+                        <input type="text" placeholder="Phone Number" />
+                    </div>
+                </div>
+                <div>Bio</div>
+                <input type="text" placeholder="Bio" />
+            </div>
+            
+
+                
+                    <button style="
+                    width: 10%; 
+                    height: 10%;
+                    margin-top: 20px;"
+                    >edit</button>
+                
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

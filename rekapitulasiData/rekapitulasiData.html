@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="rekapitulasiData.css"
+  </head>
+  <body>
+    <div class="container">
+      <div
+        style="
+          background-color: #f6c6fa;
+          height: 10vh;
+          display: flex;
+          justify-content: space-between;
+          padding: 0 20px;
+          color: aliceblue;
+        "
+      >
+        <img src="/assets/logo_amikom_besar.png" style="width: 3cm" />
+        <a
+          href="/index.html"
+          style="background-color: red; color: white; width: 50px; height: 30px"
+        >
+          log out
+        </a>
+      </div>
+      <div style="display: flex">
+        <div
+          style="
+            background-color: #7146a3;
+            height: 90vh;
+            width: 15vw;
+            justify-content: flex-start;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+          "
+        >
+          <img
+            src="/assets/toppng.com-file-svg-profile-icon-vector-980x980.png"
+            alt="avatar"
+            style="
+              border-radius: 50%;
+              width: 100px;
+              height: 100px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+            "
+          />
+          <button
+            style="
+              width: 100%;
+              height: 5%;
+              border: 0px;
+              margin-bottom: 20px;
+              cursor: pointer;
+              transition-duration: 0.4%;
+            "
+          >
+            dashboard
+          </button>
+          <button
+            style="width: 100%; height: 5%; border: 0px; margin-bottom: 20px"
+          >
+            input data
+          </button>
+          <button
+            style="width: 100%; height: 5%; border: 0px; margin-bottom: 20px"
+          >
+            rekapitulasi
+          </button>
+          <button class="button button4">test button</button>
+        </div>
+        <div
+          style="
+            background-color: white;
+            height: 90vh;
+            width: 85vw;
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+          "
+        >
+          <div style="margin-top: 20px; margin-left: 50px">
+            <p style="font-size: 40px">Dashboard</p>
+          </div>
+          <!-- QR and Active Status -->
+          <div
+            style="
+              background-color: rgb(255, 255, 255);
+              height: 20%;
+              width: 90%;
+              margin-top: 50px;
+              margin-left: 50px;
+              display: flex;
+              flex-direction: row;
+            "
+          >
+            <div style="width: 60%; margin-left: 10px;" >
+              <img
+                src="/assets/Qr-Code-Background-PNG.png"
+                alt="avatar"
+                style="
+                  
+                  width: 100px;
+                  height: 100px;
+                  margin-top: 20px;
+                "
+              />
+            </div>
+            <div style="
+            width: 40%;
+            margin-top: 20px;
+            background-color: #B4CEAF;" >
+              <p style="margin-bottom: 10px; margin-top: 10px;">Status</p>
+              <p style="margin-bottom: 10px;">v Active</p>
+              <p style="margin-bottom: 10px;">Muhammad Fairul</p>
+              <p style="margin-bottom: 10px;">Dosen</p>
+            </div>
+            
+            
+          </div>
+          <!-- personal information section-->
+          <!-- margin-left: 50px;
+          display: flex;
+          flex-direction: row; -->
+          <div
+            style="
+              background-color: rgb(255, 255, 255);
+              height: 30%;
+              width: 90%;
+              margin-top: 20px;
+              margin-left: 50px;
+            "
+          >
+          <table style="
+          border-collapse: collapse;
+          width: 100%;">
+            <tr>
+              <th>No</th>
+              <th>Hari, Jam, Ruangan</th>
+              <th>Mata Kuliah</th>
+              <th>Kelas</th>
+              <th>Edit</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Senin, 10:00 - 11:00</td>
+              <td>Matematika</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Senin, 10:00 - 11:00</td>
+              <td>Sains</td>
+              <td>5</td>
+            </tr>
+          </table>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+  </body>
+</html>
