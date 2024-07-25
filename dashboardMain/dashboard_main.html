@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UAS</title>
-    <link rel="stylesheet" href="/dashboardMain/dashboard_main.css"
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard_main.css"
   </head>
   <body>
     <div class="container">
@@ -62,6 +62,7 @@
               margin-bottom: 20px;
             "
           />
+
           <a class="btn5" href="/dashboardMain/dashboard_main.html"
             >Dashboard</a
           >
@@ -148,43 +149,10 @@
             flex-direction: column;
           "
         >
-          <!--   -->
-          <div style="display: flex; flex-direction: row">
-            <div style="margin-top: 20px; margin-left: 50px; width: 50%">
-              <p style="font-size: 40px">UAS Mahasiswa</p>
-            </div>
-            <div style="margin-top: 30px; width: 30%">
-              <input
-                style="width: 234px; height: 49px"
-                list="Mata Kuliah"
-                name="Subject"
-                placeholder="Pilih Mata Kuliah"
-              />
-              <datalist id="Mata Kuliah">
-                <option value="Pemrograman Web"></option>
-                <option value="Algoritma Pemrograman"></option>
-                <option value="Keamanan Data dan Informasi"></option>
-                <option value="Statistika"></option>
-                <option value="Kalkulus"></option>
-              </datalist>
-            </div>
-            <div style="margin-top: 30px; width: 20%">
-              <button
-                style="
-                  background-color: #7146a3;
-                  color: white;
-                  width: 234px;
-                  height: 49px;
-                  cursor: pointer;
-                  border-radius: 10px;
-                  border: none;
-                "
-              >
-                Tampilkan
-              </button>
-            </div>
+          <div style="margin-top: 20px; margin-left: 50px">
+            <p style="font-size: 40px">Dashboard</p>
           </div>
-          <!-- Search Section-->
+          <!-- QR and Active Status -->
           <div
             style="
               background-color: rgb(255, 255, 255);
@@ -196,66 +164,47 @@
               flex-direction: row;
             "
           >
-            <div style="width: 50%; display: flex; flex-direction: row">
-              <form>
-                <input
-                  style="width: 244px; height: 67px"
-                  list="Kelas"
-                  name="Class"
-                  placeholder="Cari Kelas"
-                />
-                <datalist id="Kelas">
-                  <option value="D3 TI 01"></option>
-                  <option value="D3 TI 02"></option>
-                  <option value="D3 TI 03"></option>
-                  <option value="D3 TI 04"></option>
-                  <option value="D3 TI 05"></option>
-                </datalist>
-              </form>
-              <form>
-                <input
-                  style="width: 244px; height: 67px; margin-left: 10px"
-                  list="finalExam"
-                  name="UjianAkhirSemester"
-                  placeholder="UAS Sem"
-                />
-                <datalist id="finalExam">
-                  <option value="01"></option>
-                  <option value="02"></option>
-                  <option value="03"></option>
-                  <option value="04"></option>
-                  <option value="05"></option>
-                </datalist>
-              </form>
+            <div style="width: 60%; margin-left: 10px">
+              <img
+                src="/assets/Qr-Code-Background-PNG.png"
+                alt="avatar"
+                style="width: 100px; height: 100px; margin-top: 20px"
+              />
             </div>
-            <div style="width: 50%">
-              <div style="display: flex; align-items: center">
-                <input
-                  style="width: 488px; height: 67px"
-                  type="search"
-                  placeholder="Cari NIM"
-                  name="search"
-                />
-                <button
-                  style="
-                    background: none;
-                    border: none;
-                    cursor: pointer;
-                    width: 20px;
-                  "
-                  type="submit"
-                >
-                  <img
-                    src="/assets/PinClipart.com_free-clipart-icons_4851736.png"
-                    alt="search"
-                    style="width: 30px; height: 30px; margin-left: 10px"
-                  />
-                </button>
-              </div>
+            <div
+              style="
+                width: 40%;
+                margin-top: 20px;
+                background-color: #b4ceaf;
+                border-radius: 5px;
+              "
+            >
+              <p
+                style="
+                  margin-bottom: 10px;
+                  margin-top: 10px;
+                  font-weight: bold;
+                  font-size: large;
+                  margin-left: 15px;
+                "
+              >
+                Status
+              </p>
+              <p style="margin-bottom: 10px; color: green; margin-left: 15px">
+                &#10003; Active
+              </p>
+              <p style="margin-bottom: 10px; color: #616161; margin-left: 15px">
+                Muhammad Fairul
+              </p>
+              <p style="margin-bottom: 10px; color: #616161; margin-left: 15px">
+                Dosen
+              </p>
             </div>
           </div>
-          <!-- Table Section-->
-
+          <!-- personal information section-->
+          <!-- margin-left: 50px;
+          display: flex;
+          flex-direction: row; -->
           <div
             style="
               background-color: rgb(255, 255, 255);
@@ -267,61 +216,28 @@
           >
             <table style="border-collapse: collapse; width: 100%">
               <tr>
-                <th>NIM</th>
-                <th>Nama</th>
-                <th>UAS Sem -</th>
-                <th>Nilai</th>
-                <th>Input Nilai</th>
-                <th>Edit</th>
+                <th>No</th>
+                <th>Hari, Jam, Ruangan</th>
+                <th>Mata Kuliah</th>
+                <th>Kelas</th>
+                <th></th>
               </tr>
               <tr>
-                <td style="text-align: center">23.01.5071</td>
-                <td style="text-align: center">Muhammad Fairul</td>
-                <td style="text-align: center">1</td>
-                <td style="text-align: center">100</td>
-                <td style="text-align: center">
-                  <input
-                    style="background: none; border: none; text-align: center"
-                    type="numeric"
-                    placeholder="Masukan Nilai"
-                  />
-                </td>
-                <td style="text-align: center">
-                  <button
-                    style="background: none; border: none; cursor: pointer"
-                    type="submit"
-                  >
-                    <img
-                      src="/assets/file-save-icon-18.jpg"
-                      alt="search"
-                      style="width: 30px; height: 30px"
-                    />
-                  </button>
+                <td>1</td>
+                <td style="text-align: center">Senin, 10:00 - 11:00</td>
+                <td style="text-align: center">Pemrograman Web</td>
+                <td style="text-align: center">05.01.03</td>
+                <td style="text-align: center; align-items: center">
+                  <img src="/assets/three-dots-icon-size_16.png" />
                 </td>
               </tr>
               <tr>
-                <td style="text-align: center">23.01.5072</td>
-                <td style="text-align: center">Muhammad Ronaldo</td>
-                <td style="text-align: center">1</td>
-                <td style="text-align: center">90</td>
-                <td style="text-align: center">
-                  <input
-                    style="background: none; border: none; text-align: center"
-                    type="numeric"
-                    placeholder="Masukan Nilai"
-                  />
-                </td>
-                <td style="text-align: center">
-                  <button
-                    style="background: none; border: none; cursor: pointer"
-                    type="submit"
-                  >
-                    <img
-                      src="/assets/file-save-icon-18.jpg"
-                      alt="search"
-                      style="width: 30px; height: 30px"
-                    />
-                  </button>
+                <td>2</td>
+                <td style="text-align: center">Selasa, 10:00 - 11:00</td>
+                <td style="text-align: center">Pemrograman Web</td>
+                <td style="text-align: center">01.04.03</td>
+                <td style="text-align: center; align-items: center">
+                  <img src="/assets/three-dots-icon-size_16.png" />
                 </td>
               </tr>
             </table>
@@ -331,6 +247,7 @@
     </div>
 
     <script>
+      // JavaScript remains unchanged
       var dropdown = document.getElementsByClassName("dropdown-btn");
       var i;
 

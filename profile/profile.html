@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css"
+  </head>
+  <body>
+    <div class="container">
+      <div
+        style="
+          background-color: #f6c6fa;
+          height: 10vh;
+          display: flex;
+          justify-content: space-between;
+          padding: 0 20px;
+          color: aliceblue;
+          text-align: center;
+        "
+      >
+        <img src="/assets/logo-amikom.png" style="width: 10cm" />
+        <div
+          style="
+            background-color: red;
+            width: 107px;
+            height: 35px;
+            margin-top: 20px;
+            border-radius: 5px;
+            justify-content: center;
+            display: flex;
+          "
+        >
+          <a
+            style="color: white; text-decoration: none; margin-top: 7px"
+            href="/index.html"
+          >
+            log out
+          </a>
+        </div>
+      </div>
+      <div style="display: flex">
+        <div
+          style="
+            background-color: #7146a3;
+            height: 90vh;
+            width: 15vw;
+            justify-content: flex-start;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+          "
+        >
+          <img
+            src="/assets/WhatsApp Image 2024-06-22 at 22.02.09_02b86005.jpg"
+            alt="avatar"
+            style="
+              border-radius: 50%;
+              width: 100px;
+              height: 100px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+            "
+          />
+          <a class="btn5" href="/dashboardMain/dashboard_main.html"
+            >Dashboard</a
+          >
+          <a class="btn5" href="profile.html">Profile</a>
+          <button class="dropdown-btn">
+            Input Data
+            <i
+              class="fa fa-caret-down"
+              style="float: right; padding-right: 8px"
+            ></i>
+          </button>
+          <div
+            class="dropdown-container"
+            style="
+              display: none;
+              background-color: #fbd0fc;
+              padding-left: 2px;
+              width: 15vw;
+            "
+          >
+            <a class="btn-child" href="/inputData/kehadiran/kehadiran.html"
+              >Kehadiran</a
+            >
+            <a class="btn-child" href="#">Tugas</a>
+            <a class="btn-child" href="#">Responsi</a>
+            <a class="btn-child" href="#">UTS</a>
+            <a class="btn-child" href="#">UAS</a>
+          </div>
+          <button
+            class="dropdown-btn"
+            style="
+              padding: 6px 8px 6px 16px;
+              text-decoration: none;
+              font-size: 20px;
+              color: #ffffff;
+              display: block;
+              border: none;
+              background: none;
+              width: 100%;
+              text-align: left;
+              cursor: pointer;
+              outline: none;
+            "
+          >
+            Rekapitulasi
+            <i
+              class="fa fa-caret-down"
+              style="float: right; padding-right: 8px"
+            ></i>
+          </button>
+          <div
+            class="dropdown-container"
+            style="
+              display: none;
+              background-color: #fbd0fc;
+              padding-left: 2px;
+              width: 15vw;
+            "
+          >
+            <a class="btn-child" href="#">Kehadiran</a>
+            <a class="btn-child" href="#">Tugas</a>
+            <a class="btn-child" href="#">Responsi</a>
+            <a class="btn-child" href="#">UTS</a>
+            <a class="btn-child" href="#">UAS</a>
+          </div>
+        </div>
+        <div
+          style="
+            background-color: white;
+            height: 90vh;
+            width: 85vw;
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+          "
+        >
+          <div style="margin-top: 20px; margin-left: 50px">
+            <p style="font-size: 40px">My Profile</p>
+          </div>
+          <!-- personal information foto dan nama -->
+          <div
+            style="
+              background-color: rgb(198, 198, 198);
+              height: 30%;
+              width: 90%;
+              margin-top: 50px;
+              margin-left: 50px;
+              display: flex;
+              flex-direction: row;
+            "
+          >
+            <div style="width: 20%; margin-left: 10px">
+              <img
+                src="/assets/toppng.com-file-svg-profile-icon-vector-980x980.png"
+                alt="avatar"
+                style="
+                  border-radius: 50%;
+                  width: 100px;
+                  height: 100px;
+                  margin-top: 20px;
+                "
+              />
+            </div>
+            <div style="width: 70%; margin-top: 20px">
+              <p style="margin-bottom: 10px">Muhammad Fairul</p>
+              <p style="margin-bottom: 10px">Dosen</p>
+              <p>Sleman,Yogyakarta</p>
+            </div>
+
+            <button style="width: 10%; height: 10%; margin-top: 20px">
+              edit
+            </button>
+          </div>
+          <!-- personal information section-->
+          <div
+            style="
+              background-color: rgb(198, 198, 198);
+              height: 30%;
+              width: 90%;
+              margin-top: 10px;
+              margin-left: 50px;
+              display: flex;
+              flex-direction: row;
+            "
+          >
+            <div style="width: 90%; margin-left: 10px">
+              <div>
+                <p style="font-size: 20px">My Profile</p>
+              </div>
+              <div style="display: flex; flex-direction: row">
+                <div style="margin-right: 60%">
+                  <p>First Name</p>
+                  <input type="text" placeholder="First Name" />
+                </div>
+                <div>
+                  <p>Last Name</p>
+                  <input type="text" placeholder="Last Name" />
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: row">
+                <div style="margin-right: 60%">
+                  <p>Email Addres</p>
+                  <input type="text" placeholder="Email Addres" />
+                </div>
+                <div>
+                  <p>Phone Number</p>
+                  <input type="text" placeholder="Phone Number" />
+                </div>
+              </div>
+              <div>Bio</div>
+              <input type="text" placeholder="Bio" />
+            </div>
+
+            <button style="width: 10%; height: 10%; margin-top: 20px">
+              edit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // JavaScript remains unchanged
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

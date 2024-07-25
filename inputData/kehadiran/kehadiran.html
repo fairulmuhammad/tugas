@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>Kehadiran</title>
     <link rel="stylesheet" href="kehadiran.css"
   </head>
   <body>
@@ -16,15 +16,28 @@
           justify-content: space-between;
           padding: 0 20px;
           color: aliceblue;
+          text-align: center;
         "
       >
-        <img src="/assets/logo_amikom_besar.png" style="width: 3cm" />
-        <a
-          href="/index.html"
-          style="background-color: red; color: white; width: 50px; height: 30px"
+        <img src="/assets/logo-amikom.png" style="width: 10cm" />
+        <div
+          style="
+            background-color: red;
+            width: 107px;
+            height: 35px;
+            margin-top: 20px;
+            border-radius: 5px;
+            justify-content: center;
+            display: flex;
+          "
         >
-          log out
-        </a>
+          <a
+            style="color: white; text-decoration: none; margin-top: 7px"
+            href="/index.html"
+          >
+            log out
+          </a>
+        </div>
       </div>
       <div style="display: flex">
         <div
@@ -39,7 +52,7 @@
           "
         >
           <img
-            src="/assets/toppng.com-file-svg-profile-icon-vector-980x980.png"
+            src="/assets/WhatsApp Image 2024-06-22 at 22.02.09_02b86005.jpg"
             alt="avatar"
             style="
               border-radius: 50%;
@@ -49,29 +62,81 @@
               margin-bottom: 20px;
             "
           />
-          <button
+          <a class="btn5" href="/dashboardMain/dashboard_main.html"
+            >Dashboard</a
+          >
+          <a class="btn5" href="/profile/profile.html">Profile</a>
+          <button class="dropdown-btn">
+            Input Data
+            <i
+              class="fa fa-caret-down"
+              style="float: right; padding-right: 8px"
+            ></i>
+          </button>
+          <div
+            class="dropdown-container"
             style="
-              width: 100%;
-              height: 5%;
-              border: 0px;
-              margin-bottom: 20px;
-              cursor: pointer;
-              transition-duration: 0.4%;
+              display: none;
+              background-color: #fbd0fc;
+              padding-left: 2px;
+              width: 15vw;
             "
           >
-            dashboard
-          </button>
+            <a class="btn-child" href="/inputData/kehadiran/kehadiran.html"
+              >Kehadiran</a
+            >
+            <a class="btn-child" href="/inputData/tugas/tugas.html">Tugas</a>
+            <a class="btn-child" href="/inputData/responsi/responsi.html"
+              >Responsi</a
+            >
+            <a class="btn-child" href="/inputData/UTS/uts.html">UTS</a>
+            <a class="btn-child" href="/inputData/UAS/uas.html">UAS</a>
+          </div>
           <button
-            style="width: 100%; height: 5%; border: 0px; margin-bottom: 20px"
+            class="dropdown-btn"
+            style="
+              padding: 6px 8px 6px 16px;
+              text-decoration: none;
+              font-size: 20px;
+              color: #ffffff;
+              display: block;
+              border: none;
+              background: none;
+              width: 100%;
+              text-align: left;
+              cursor: pointer;
+              outline: none;
+            "
           >
-            input data
+            Rekapitulasi
+            <i
+              class="fa fa-caret-down"
+              style="float: right; padding-right: 8px"
+            ></i>
           </button>
-          <button
-            style="width: 100%; height: 5%; border: 0px; margin-bottom: 20px"
+          <div
+            class="dropdown-container"
+            style="
+              display: none;
+              background-color: #fbd0fc;
+              padding-left: 2px;
+              width: 15vw;
+            "
           >
-            rekapitulasi
-          </button>
-          <button class="button button4">test button</button>
+            <a
+              class="btn-child"
+              href="/rekapitulasiData/kehadiran/kehadiran.html"
+              >Kehadiran</a
+            >
+            <a class="btn-child" href="/rekapitulasiData/tugas/tugas.html"
+              >Tugas</a
+            >
+            <a class="btn-child" href="/rekapitulasiData/responsi/responsi.html"
+              >Responsi</a
+            >
+            <a class="btn-child" href="/rekapitulasiData/UTS/uts.html">UTS</a>
+            <a class="btn-child" href="/rekapitulasiData/UAS/uas.html">UAS</a>
+          </div>
         </div>
         <div
           style="
@@ -83,19 +148,43 @@
             flex-direction: column;
           "
         >
-          <!--   -->
+          <!-- Main Content  -->
           <div style="display: flex; flex-direction: row">
             <div style="margin-top: 20px; margin-left: 50px; width: 50%">
               <p style="font-size: 40px">Kehadiran</p>
             </div>
-            <div>
-              <p>Pilih Mata Kuliah</p>
+            <div style="margin-top: 30px; width: 30%">
+              <input
+                style="width: 234px; height: 49px"
+                list="Mata Kuliah"
+                name="Subject"
+                placeholder="Pilih Mata Kuliah"
+              />
+              <datalist id="Mata Kuliah">
+                <option value="Pemrograman Web"></option>
+                <option value="Algoritma Pemrograman"></option>
+                <option value="Keamanan Data dan Informasi"></option>
+                <option value="Statistika"></option>
+                <option value="Kalkulus"></option>
+              </datalist>
             </div>
-            <div>
-              <button>Tampilkan</button>
+            <div style="margin-top: 30px; width: 20%">
+              <button
+                style="
+                  background-color: #7146a3;
+                  color: white;
+                  width: 234px;
+                  height: 49px;
+                  cursor: pointer;
+                  border-radius: 10px;
+                  border: none;
+                "
+              >
+                Tampilkan
+              </button>
             </div>
           </div>
-          <!-- QR and Active Status -->
+
           <div
             style="
               background-color: rgb(255, 255, 255);
@@ -107,77 +196,64 @@
               flex-direction: row;
             "
           >
-            <!-- <div style="width: 60%; margin-left: 10px;" >
-              <img
-                src="/assets/Qr-Code-Background-PNG.png"
-                alt="avatar"
-                style="
-                  
-                  width: 100px;
-                  height: 100px;
-                  margin-top: 20px;
-                "
-              />
-            </div>
-            <div style="
-            width: 40%;
-            margin-top: 20px;
-            background-color: #B4CEAF;" >
-              <p style="margin-bottom: 10px; margin-top: 10px;">Status</p>
-              <p style="margin-bottom: 10px;">v Active</p>
-              <p style="margin-bottom: 10px;">Muhammad Fairul</p>
-              <p style="margin-bottom: 10px;">Dosen</p>
-            </div> -->
+            <!-- section pilih kelas dan cari nim -->
 
-            <!-- test section pilih kelas dan cari nim -->
-
-            <div style="width: 50%; background-color: aqua;">
-              <!-- <form>
-                    <label>Pilih Kelas</label>
-                    <select id="Kelas" name="Class">
-                        <option value="D3 TI 03">D3 TI 03</option>
-                        <option value="D3 TI 02">D3 TI 02</option>
-                        <option value="D3 TI 01">D3 TI 01</option>
-                        <option value="D3 TI 04">D3 TI 04</option>
-                    </select>
-                </form> -->
-              <form style="background-color: aqua;">
-                <input list="Kelas" name="Class" placeholder="Cari Kelas" />
-                <datalist style="background-color: aqua;" id="Kelas">
+            <div style="width: 50%; display: flex; flex-direction: row">
+              <form>
+                <input
+                  style="width: 244px; height: 67px"
+                  list="Kelas"
+                  name="Class"
+                  placeholder="Cari Kelas"
+                />
+                <datalist id="Kelas">
                   <option value="D3 TI 01"></option>
                   <option value="D3 TI 02"></option>
                   <option value="D3 TI 03"></option>
                   <option value="D3 TI 04"></option>
                   <option value="D3 TI 05"></option>
                 </datalist>
-
-                <input type="submit" />
               </form>
-            </div>
-            <div class="pencet" onclick="test()">
-              <script>
-                var color = "red"
-                function test() {
-    var elements = document.getElementsByClassName('pencet');
-    console.log(elements)
-    if (elements.length > 0) {
-      var pElement = elements[0].getElementsByTagName('p')[0];
-      if (pElement.style.color === 'red') {
-        pElement.style.color = 'yellow';
-      } else {
-        pElement.style.color = color;
-      }
-    }}
-    console.log('anjeengg');
-              </script>
-              <p style="color:red;">test</p>
-            </div>
-            
-            <div style="width: 50%">
               <form>
-                <input type="search" placeholder="Cari NIM" name="search" />
-                <button type="submit">Cari</button>
+                <input
+                  style="width: 244px; height: 67px; margin-left: 10px"
+                  list="kehadiran"
+                  name="Attendance"
+                  placeholder="Minggu Ke"
+                />
+                <datalist id="kehadiran">
+                  <option value="01"></option>
+                  <option value="02"></option>
+                  <option value="03"></option>
+                  <option value="04"></option>
+                  <option value="05"></option>
+                </datalist>
               </form>
+            </div>
+            <div style="width: 50%">
+              <div style="display: flex; align-items: center">
+                <input
+                  style="width: 488px; height: 67px"
+                  type="search"
+                  placeholder="Cari NIM"
+                  name="search"
+                />
+                <button
+                  style="
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    width: 20px;
+                  "
+                  type="submit"
+                >
+                  <img
+                    src="/assets/PinClipart.com_free-clipart-icons_4851736.png"
+                    alt="search"
+                    style="width: 30px; height: 30px; margin-left: 10px"
+                  />
+                </button>
+              </div>
             </div>
           </div>
           <!-- personal information section-->
@@ -199,47 +275,80 @@
                 <th>Nama</th>
                 <th>Pertemuan Ke -</th>
                 <th>Kehadiran</th>
-                <th>Tambah Data</th>
+                <th>Tambah Data ( YA / TIDAK )</th>
                 <th>Edit</th>
               </tr>
               <tr>
-                <td>23.01.5071</td>
-                <td>Cristiano Ronaldo</td>
-                <td>1</td>
-                <td>YA</td>
+                <td style="text-align: center">23.01.5071</td>
+                <td style="text-align: center">Muhammad Fairul</td>
+                <td style="text-align: center">1</td>
+                <td style="text-align: center">YA</td>
+                <td style="text-align: center">
+                  <input
+                    style="background: none; border: none; text-align: center"
+                    type="text"
+                    placeholder="YA/TIDAK"
+                  />
+                </td>
+                <td style="text-align: center">
+                  <button
+                    style="background: none; border: none; cursor: pointer"
+                    type="submit"
+                  >
+                    <img
+                      src="/assets/file-save-icon-18.jpg"
+                      alt="search"
+                      style="width: 30px; height: 30px"
+                    />
+                  </button>
+                </td>
               </tr>
               <tr>
-                <td>23.01.5071</td>
-                <td>Messi</td>
-                <td>1</td>
-                <td>YA</td>
+                <td style="text-align: center">23.01.5072</td>
+                <td style="text-align: center">Muhammad Ronaldo</td>
+                <td style="text-align: center">1</td>
+                <td style="text-align: center">TIDAK</td>
+                <td style="text-align: center">
+                  <input
+                    style="background: none; border: none; text-align: center"
+                    type="Kehadiran"
+                    placeholder="YA/TIDAK"
+                  />
+                </td>
+                <td style="text-align: center">
+                  <button
+                    style="background: none; border: none; cursor: pointer"
+                    type="submit"
+                  >
+                    <img
+                      src="/assets/file-save-icon-18.jpg"
+                      alt="search"
+                      style="width: 30px; height: 30px"
+                    />
+                  </button>
+                </td>
               </tr>
             </table>
           </div>
         </div>
       </div>
     </div>
-   
+
     <script>
-    
-      
-      /* When the user clicks on the button, 
-        toggle between hiding and showing the dropdown content */
-      function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
 
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function (e) {
-        console.log('hallo');
-        if (!e.target.matches(".dropbtn")) {
-          var myDropdown = document.getElementById("myDropdown");
-          if (myDropdown.classList.contains("show")) {
-            myDropdown.classList.remove("show");
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
           }
-
-        }
-      };
+        });
+      }
     </script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,46 +14,103 @@
       <input type="checkbox" id="check" />
       <div class="login form">
         <header>
-          <img
-            src="/assets/logo_amikom_besar.png"
-            style="height: 3cm"
-          />
+          <img src="/assets/logo_amikom_besar.png" style="height: 3cm" />
         </header>
         <form action="#">
-          <input type="text" placeholder="Masukan NIM" />
-          <input type="password" placeholder="Masukan Password" />
-          <a href="#">Forgot password?</a>
-          <a href="/dashbaord/dashbaord.html">Login</a>
+          <input type="text" id="nim" placeholder="Masukan NIM" />
+          <input type="password" id="password" placeholder="Masukan Password" />
+          <p href="#">Forgot password?</p>
+          <input
+            type="button"
+            class="button"
+            value="Login"
+            onclick="validateLoginForm()"
+          />
         </form>
         <div class="signup">
           <span class="signup"
             >Don't have an account?
-            <label for="check">Signup</label>
+            <label for="check">Sign Up</label>
           </span>
         </div>
       </div>
       <div class="registration form">
-        <header>
-          <img
-            src="/assets/logo_amikom_besar.png"
-            style="height: 3cm"
-          />
-          Signup
+        <header style="display: flex; flex-direction: column">
+          <div>
+            <img src="/assets/logo_amikom_besar.png" style="height: 3cm" />
+          </div>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              justify-items: center;
+            "
+          >
+            Sign Up
+          </div>
         </header>
         <form action="#">
-          <input type="text" placeholder="NIM" />
-          <input type="text" placeholder="Email" />
-          <input type="password" placeholder="Create a password" />
-          <input type="password" placeholder="Confirm your password" />
-          <input type="button" class="button" value="Signup" />
+          <input type="text" id="signupNIM" placeholder="NIM" />
+          <input type="text" id="signupEmail" placeholder="Email" />
+          <input
+            type="password"
+            id="signupPassword"
+            placeholder="Create a password"
+          />
+          <input
+            type="password"
+            id="signupConfirmPassword"
+            placeholder="Confirm your password"
+          />
+          <input
+            type="button"
+            class="button"
+            value="Sign Up"
+            onclick="validateSignupForm()"
+          />
         </form>
         <div class="signup">
           <span class="signup"
             >Already have an account?
-            <a href="/dashbaord/dashbaord.html">Login</a>
+            <a href="/index.html">Login</a>
           </span>
         </div>
       </div>
     </div>
+    <script>
+      function validateLoginForm() {
+        var nim = document.getElementById("nim").value;
+        var password = document.getElementById("password").value;
+
+        if (nim === "" || password === "") {
+          alert("NIM dan Password harus diisi");
+        } else {
+          window.location.href = "/dashboardMain/dashboard_main.html";
+        }
+      }
+
+      function validateSignupForm() {
+        var nim = document.getElementById("signupNIM").value;
+        var email = document.getElementById("signupEmail").value;
+        var password = document.getElementById("signupPassword").value;
+        var confirmPassword = document.getElementById(
+          "signupConfirmPassword"
+        ).value;
+
+        if (
+          nim === "" ||
+          email === "" ||
+          password === "" ||
+          confirmPassword === ""
+        ) {
+          alert("Semua bidang harus diisi");
+        } else if (password !== confirmPassword) {
+          alert("Password dan Konfirmasi Password harus sama");
+        } else {
+          alert("Pendaftaran berhasil!");
+          // Add your form submission or redirection code here
+        }
+      }
+    </script>
   </body>
 </html>
